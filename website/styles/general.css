@@ -1,0 +1,23 @@
+body {
+  background-color:white;
+  margin: 0;
+  padding: 35px;
+  font-family: arial;
+  width: 900px;
+  min-width: 800px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
