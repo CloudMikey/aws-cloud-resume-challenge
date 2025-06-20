@@ -1,0 +1,45 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  justify-content: space-between;
+  height: 120px;
+  margin-bottom: 0;
+  background-color: rgba(229, 203, 203, 0.471);
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.intro-block {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
+.name {
+  font-size: 35px;
+  color: rgb(102, 9, 9);
+  font-weight: bold;
+  font-family: 'Times New Roman';
+
+}
+
+.intro-info {
+  padding-top: 10px;
+  padding-right: 50px;
+  color: rgb(77, 76, 76);
+}
+
+
+.personal-info-block {
+  padding-left: 20px;
+  padding-top: 4px;
+}
+
+.addy {
+  margin-top: 18px;
+}
+
+.contacts {
+  font-weight: bold;
+}
+

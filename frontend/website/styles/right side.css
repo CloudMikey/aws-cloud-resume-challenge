@@ -1,0 +1,53 @@
+.right-side {
+  padding-left: 20px;
+  background-color: rgba(217, 217, 217, 0.471);
+  border-bottom-right-radius: 15px;
+}
+
+.views {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 10px;
+  margin-left: -20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(102, 9, 9);
+  
+}
+
+.counter {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  margin-left: -20px;
+  padding-bottom: 10px;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+  
+}
+
+.r-titles {
+  font-family: 'Times New Roman';
+  font-weight: bold;
+  color: rgb(102, 9, 9);
+  margin-top: 60px;
+}
+
+.bullets {
+  color: rgb(77, 76, 76);
+  margin-bottom: 60px;
+}
+
+.bullets p {
+  width: 100%; 
+  max-width: 300px; 
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  margin: 10px;
+  padding-inline-start: 1em;
+  text-indent: -10px;
+}

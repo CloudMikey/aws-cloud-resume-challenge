@@ -1,0 +1,62 @@
+
+.left-side {
+  padding-right: 50px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.sub-title {
+  color: rgb(102, 9, 9);
+  font-family: 'Times New Roman';
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.jobtitle {
+  font-size: 17px;
+  font-family: 'Times New Roman';
+  margin: 0;
+}
+
+.duration {
+  font-size: 14px;
+  font-family: 'Times New Roman';
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.task {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.task, .duration, .projects {
+  color: rgb(77, 76, 76);
+}
+
+
+/* prooject */
+.sec-2 {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.project-title, .school {
+  font-family: 'Times New Roman';
+  color: black;
+  font-size: 17px;
+}
+
+
+/* education */
+.school {
+  margin-bottom: 0;
+  padding-bottom: -5px;
+}
+
+
+
+
