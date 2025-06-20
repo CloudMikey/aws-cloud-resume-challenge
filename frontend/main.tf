@@ -21,6 +21,11 @@ resource "aws_s3_bucket" "dev_bucket" {
   bucket = "mikhael-website-2025"
   force_destroy = true
 }
+resource "aws_s3_bucket" "test_1" {
+  bucket = "no-deploy"
+  force_destroy = true
+}
+
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "dev_bucket_encryption" {
   bucket = aws_s3_bucket.dev_bucket.id
