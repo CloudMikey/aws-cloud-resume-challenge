@@ -21,8 +21,8 @@ resource "aws_s3_bucket" "dev_bucket" {
   bucket = "mikhael-website-2025"
   force_destroy = true
 }
-resource "aws_s3_bucket" "test_1" {
-  bucket = "no-deploy"
+resource "aws_s3_bucket" "test_2" {
+  bucket = "mikestestbucket-num1"
   force_destroy = true
 }
 
