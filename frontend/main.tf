@@ -26,6 +26,11 @@ resource "aws_s3_bucket" "dev_bucket" {
   force_destroy = true
 }
 
+resource "aws_s3_bucket" "dev_bucket2" {
+  bucket = "terraform-mikhael-website-2025checkkk"
+  force_destroy = true
+}
+
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "dev_bucket_encryption" {
   bucket = aws_s3_bucket.dev_bucket.id
