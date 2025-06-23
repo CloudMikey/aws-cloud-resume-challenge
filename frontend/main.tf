@@ -6,6 +6,12 @@ terraform {
       version = "~> 5.0"
     }
   }
+  backend "s3" {
+    bucket         = "crc-terraform-state-2025"
+    key            = "frontend/terraform.tfstate"
+    region         = "us-west-1"
+    dynamodb_table = "crc-terraform-locks"
+  }
 }
 
 # Configure the AWS Provider
