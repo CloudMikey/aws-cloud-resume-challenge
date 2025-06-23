@@ -103,11 +103,22 @@ resource "aws_cloudfront_distribution" "dev_cf_distribution" {
 
   #ACM certificate for HTTPS
   viewer_certificate {
-    acm_certificate_arn            = "arn:aws:acm:us-east-1:061039801477:certificate/b01d02c1-26a3-409e-9597-913eb77f941e"
+    acm_certificate_arn            = data.aws_acm_certificate.acm_cert.arn
     ssl_support_method             = "sni-only"
     cloudfront_default_certificate = false
     minimum_protocol_version       = "TLSv1.2_2021"
   }
+}
+
+#--------------------ACM-Certificate --------------------#
+data "aws_acm_certificate" "acm_cert" {
+  domain   = "mikhaelvillamor.com"
+  statuses = ["ISSUED"]
+
+  # Ensure the certificate is in the us-east-1 region for CloudFront
+  most_recent = true
+  provider    = aws.us_east_1
+  
 }
 
 #--------------------S3 Bucket Policy/CloudFront Access --------------------#
@@ -170,30 +181,3 @@ resource "aws_route53_record" "www" {
   }
 }
 
-#--------------------DynamoDB Table --------------------#
-# This DynamoDB table will be used to store website visitor counts.
-resource "aws_dynamodb_table" "dev_table" {
-  name = "website-visitors"
-  billing_mode = "PAY_PER_REQUEST"
-  hash_key = "id"
-
-  attribute {
-    name = "id"
-    type = "S"
-  }
-}
-
-resource "aws_dynamodb_table_item" "dev_item" {
-  table_name = aws_dynamodb_table.dev_table.name
-  hash_key   = "id"
-  item = <<ITEM
-{
-    "id": {"S": "1"},
-    "views": {"N": "0"}
-}
-ITEM
-
-  lifecycle {
-    ignore_changes = [item]
-  }
-}
