@@ -27,7 +27,7 @@ resource "aws_s3_bucket" "dev_bucket" {
 }
 
 resource "aws_s3_bucket" "dev_bucket2" {
-  bucket = "terraform-mikhael-website-2025checkkk"
+  bucket = "terraform-mikhael-website-2025checkk"
   force_destroy = true
 }
 
