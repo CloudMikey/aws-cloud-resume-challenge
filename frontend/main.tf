@@ -14,7 +14,11 @@ provider "aws" {
   region  = "us-west-1"
 
 }
-
+provider "aws" {
+  alias   = "us_east_1"
+  region  = "us-east-1"
+  profile = "vscode"
+}
 #--------------------S3 Bucket --------------------#
 
 resource "aws_s3_bucket" "dev_bucket" {
@@ -22,10 +26,6 @@ resource "aws_s3_bucket" "dev_bucket" {
   force_destroy = true
 }
 
-resource "aws_s3_bucket" "dev_bucket" {
-  bucket = "terraform-mikhael-website-2025 checkkk"
-  force_destroy = true
-}
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "dev_bucket_encryption" {
   bucket = aws_s3_bucket.dev_bucket.id
@@ -119,12 +119,10 @@ resource "aws_cloudfront_distribution" "dev_cf_distribution" {
 data "aws_acm_certificate" "acm_cert" {
   domain   = "mikhaelvillamor.com"
   statuses = ["ISSUED"]
-
-  # Ensure the certificate is in the us-east-1 region for CloudFront
   most_recent = true
   provider    = aws.us_east_1
-  
 }
+
 
 #--------------------S3 Bucket Policy/CloudFront Access --------------------#
 
@@ -186,3 +184,6 @@ resource "aws_route53_record" "www" {
   }
 }
 
+output "acm_cert_arn" {
+  value = data.aws_acm_certificate.acm_cert.arn
+}
