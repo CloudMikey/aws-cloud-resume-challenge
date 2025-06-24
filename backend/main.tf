@@ -12,7 +12,7 @@ terraform {
     region         = "us-west-1"
     dynamodb_table = "crc-terraform-locks"
   }
-}
+} 
 
 # Configure the AWS Provider
 provider "aws" {
