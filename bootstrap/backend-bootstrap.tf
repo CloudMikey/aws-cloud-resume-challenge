@@ -1,3 +1,4 @@
+#Set up the backend for Terraform state files for local and github actions access simultaneously.
 provider "aws" {
   region = "us-west-1"  
 }

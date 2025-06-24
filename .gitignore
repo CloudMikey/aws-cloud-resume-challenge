@@ -3,4 +3,5 @@
 *.tfstate
 *.tfstate.backup
 *.exe
-*.md
+__pycache__/
+.pytest_cache/
