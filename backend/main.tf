@@ -16,7 +16,6 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  profile = "vscode"
   region  = "us-west-1"
 
 }
