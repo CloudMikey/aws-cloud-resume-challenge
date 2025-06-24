@@ -19,11 +19,14 @@ provider "aws" {
   region  = "us-west-1"
 
 }
-provider "aws" {
+
+#second provider for ACM certificate in us-east-1
+provider "aws" {            
   alias   = "us_east_1"
   region  = "us-east-1"
 }
-#--------------------S3 Bucket --------------------#
+
+#--------------------S3 Resources--------------------#
 
 resource "aws_s3_bucket" "dev_bucket" {
   bucket = "mikhael-website-2025"
@@ -42,7 +45,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "dev_bucket_encryp
 }
 
 #This code uploads all files from the "website" directory to the S3 bucket.
-
 resource "aws_s3_object" "dev_objets" {
   for_each = fileset("website", "**/*")
   bucket = aws_s3_bucket.dev_bucket.id
@@ -53,7 +55,7 @@ resource "aws_s3_object" "dev_objets" {
   content_type = lookup(
     {
       html = "text/html"
-      css  = "text/css"
+      css  = "text/css"                            #define proper MIME types for browser compatibility
       js   = "application/javascript"
     },
     regex("\\.([^.]+)$", each.value)[0],
