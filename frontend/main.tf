@@ -34,7 +34,7 @@ resource "aws_s3_bucket" "dev_bucket" {
 }
 
 resource "aws_s3_bucket" "dev_bucket1" {
-  bucket = "test"
+  bucket = "test5384509238452394"
   force_destroy = true
 }
 resource "aws_s3_bucket_server_side_encryption_configuration" "dev_bucket_encryption" {
