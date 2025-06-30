@@ -33,6 +33,10 @@ resource "aws_s3_bucket" "dev_bucket" {
   force_destroy = true
 }
 
+resource "aws_s3_bucket" "dev_bucket1" {
+  bucket = "test"
+  force_destroy = true
+}
 resource "aws_s3_bucket_server_side_encryption_configuration" "dev_bucket_encryption" {
   bucket = aws_s3_bucket.dev_bucket.id
 
