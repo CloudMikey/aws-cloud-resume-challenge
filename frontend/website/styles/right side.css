@@ -9,7 +9,6 @@
   text-align: center;
   padding-top: 10px;
   margin-left: -20px;
-  font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   font-size: 25px;
   color: rgb(102, 9, 9);
@@ -29,15 +28,14 @@
 }
 
 .r-titles {
-  font-family: 'Times New Roman';
   font-weight: bold;
   color: rgb(102, 9, 9);
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .bullets {
   color: rgb(77, 76, 76);
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .bullets p {
@@ -50,4 +48,11 @@
   margin: 10px;
   padding-inline-start: 1em;
   text-indent: -10px;
+}
+
+.cert-img {
+  width: 175px;
+  height: 175px;
+  margin-top: -7px;
+  margin-left: 23px;
 }
