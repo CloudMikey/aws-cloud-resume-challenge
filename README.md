@@ -6,31 +6,37 @@ A serverless cloud resume website built on AWS with Infrastructure as Code (IaC)
 
 This project follows the official [Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/) requirements:
 
-| Step | Requirement | Implementation |
-|------|-------------|----------------|
-| 1 | **AWS Certification** | AWS Certified Solutions Architect - Associate |
-| 2 | **HTML Resume** | Built from scratch - custom semantic HTML structure |
-| 3 | **CSS Styling** | Hand-coded responsive CSS with custom styling system |
-| 4 | **S3 Static Website** | S3 bucket with static website hosting |
-| 5 | **HTTPS** | CloudFront distribution with SSL |
-| 6 | **Custom DNS** | Route 53 + custom domain (mikhaelvillamor.com) |
-| 7 | **JavaScript Counter** | Visitor counter in `frontend/website/index.js` |
-| 8 | **Database** | DynamoDB table for visitor count |
-| 9 | **API** | Lambda function with function URL |
-| 10 | **Python** | Lambda function using boto3 |
-| 11 | **Tests** | Basic function test (`backend/function_test.py`) |
-| 12 | **Infrastructure as Code** | Full Terraform automation (not SAM) |
-| 13 | **Source Control** | Git repository with version control |
-| 14 | **CI/CD Backend** | GitHub Actions for backend deployment |
-| 15 | **CI/CD Frontend** | GitHub Actions for frontend deployment |
-| 16 | **Blog Post** | Technical blog about lessons learned |
+| Step | Requirement | Overview |
+|------|-------------|----------|
+| 1 | **AWS Certification** | Get AWS Cloud Practitioner or higher certification |
+| 2 | **HTML Resume** | Write resume in HTML format, not Word or PDF |
+| 3 | **CSS Styling** | Style the HTML resume with CSS |
+| 4 | **S3 Static Website** | Deploy HTML resume as S3 static website |
+| 5 | **HTTPS** | Secure website with HTTPS using CloudFront |
+| 6 | **Custom DNS** | Point custom domain to CloudFront distribution |
+| 7 | **JavaScript Counter** | Add visitor counter with JavaScript |
+| 8 | **Database** | Store visitor count in DynamoDB |
+| 9 | **API** | Create API to communicate with database |
+| 10 | **Python** | Write Lambda function code in Python |
+| 11 | **Tests** | Include tests for Python code |
+| 12 | **Infrastructure as Code** | Define resources with SAM/Terraform, not manual setup |
+| 13 | **Source Control** | Store code in GitHub repository |
+| 14 | **CI/CD Backend** | Automate backend deployments with GitHub Actions |
+| 15 | **CI/CD Frontend** | Automate frontend deployments with GitHub Actions |
+| 16 | **Blog Post** | Write blog about lessons learned |
 
 ### 🚀 Challenge Enhancements:
+
+**My Implementation Goes Beyond Requirements:**
+
+- **AWS Certified Solutions Architect - Associate**: Exceeded minimum Cloud Practitioner requirement
+- **Custom HTML/CSS from Scratch**: Built responsive resume with semantic HTML structure and hand-coded CSS styling system (`frontend/website/`)
 - **100% Infrastructure as Code**: Went beyond requirements by implementing **ALL** AWS resources with Terraform - not just the backend API. This includes S3, CloudFront, Route 53, ACM certificates, IAM roles, and policies
 - **Terraform over SAM**: Used Terraform instead of AWS SAM for broader industry applicability and enterprise-grade infrastructure management
 - **Lambda Function URL**: Used Lambda Function URL instead of API Gateway for cost optimization - eliminates API Gateway charges while maintaining secure API access
 - **Production-Ready Architecture**: Added CloudFront OAC, S3 encryption, comprehensive IAM policies, and proper state management with remote backends
 - **Multi-Environment Ready**: Structured Terraform modules support easy deployment to dev/staging/prod environments
+- **Enhanced Security**: Implemented least-privilege IAM policies, S3 bucket encryption, and secure CORS configuration
 
 ## 🎯 Project Overview
 
@@ -109,7 +115,7 @@ CRC_v3/
 - AWS CLI configured with appropriate permissions
 - Terraform installed
 - Valid AWS account
-- Custom domain (optional)
+- Custom domain 
 
 ### Infrastructure Deployment:
 
@@ -167,11 +173,3 @@ Visit the live website: [mikhaelvillamor.com](https://mikhaelvillamor.com)
 - Aspiring Cloud & DevOps Engineer
 - [LinkedIn](https://www.linkedin.com/in/mikhael-villamor-95842b362/)
 - [GitHub](https://github.com/CloudMikey)
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-*This project is part of the Cloud Resume Challenge and demonstrates practical cloud engineering skills through hands-on AWS implementation.*
