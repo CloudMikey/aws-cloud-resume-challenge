@@ -1,10 +1,40 @@
-# Cloud Resume Challenge v3
+# Cloud Resume Challenge 
 
 A serverless cloud resume website built on AWS with Infrastructure as Code (IaC) using Terraform. This project demonstrates cloud engineering skills by creating a personal resume website with a live visitor counter.
 
+## Cloud Resume Challenge Steps
+
+This project follows the official [Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/) requirements:
+
+| Step | Requirement | Implementation |
+|------|-------------|----------------|
+| 1 | **AWS Certification** | AWS Certified Solutions Architect - Associate |
+| 2 | **HTML Resume** | Built from scratch - custom semantic HTML structure |
+| 3 | **CSS Styling** | Hand-coded responsive CSS with custom styling system |
+| 4 | **S3 Static Website** | S3 bucket with static website hosting |
+| 5 | **HTTPS** | CloudFront distribution with SSL |
+| 6 | **Custom DNS** | Route 53 + custom domain (mikhaelvillamor.com) |
+| 7 | **JavaScript Counter** | Visitor counter in `frontend/website/index.js` |
+| 8 | **Database** | DynamoDB table for visitor count |
+| 9 | **API** | Lambda function with function URL |
+| 10 | **Python** | Lambda function using boto3 |
+| 11 | **Tests** | Basic function test (`backend/function_test.py`) |
+| 12 | **Infrastructure as Code** | Full Terraform automation (not SAM) |
+| 13 | **Source Control** | Git repository with version control |
+| 14 | **CI/CD Backend** | GitHub Actions for backend deployment |
+| 15 | **CI/CD Frontend** | GitHub Actions for frontend deployment |
+| 16 | **Blog Post** | Technical blog about lessons learned |
+
+### 🚀 Challenge Enhancements:
+- **100% Infrastructure as Code**: Went beyond requirements by implementing **ALL** AWS resources with Terraform - not just the backend API. This includes S3, CloudFront, Route 53, ACM certificates, IAM roles, and policies
+- **Terraform over SAM**: Used Terraform instead of AWS SAM for broader industry applicability and enterprise-grade infrastructure management
+- **Lambda Function URL**: Used Lambda Function URL instead of API Gateway for cost optimization - eliminates API Gateway charges while maintaining secure API access
+- **Production-Ready Architecture**: Added CloudFront OAC, S3 encryption, comprehensive IAM policies, and proper state management with remote backends
+- **Multi-Environment Ready**: Structured Terraform modules support easy deployment to dev/staging/prod environments
+
 ## 🎯 Project Overview
 
-This is my implementation of the [Cloud Resume Challenge](https://cloudresumechallenge.dev/) - a hands-on project designed to showcase cloud engineering skills. The project features:
+This is my implementation of the [Cloud Resume Challenge](https://cloudresumechallenge.dev/) by Forrest Brazeal- a hands-on project designed to showcase cloud engineering skills. The project features:
 
 - **Static Website**: Personal resume hosted on AWS S3
 - **Serverless Backend**: AWS Lambda function with Python for visitor tracking
@@ -17,11 +47,7 @@ This is my implementation of the [Cloud Resume Challenge](https://cloudresumecha
 
 ## 🏗️ Architecture
 
-```
-Frontend (S3) → CloudFront → Route 53 → Custom Domain
-     ↓
-JavaScript → Lambda Function → DynamoDB
-```
+![Cloud Resume Challenge Architecture](./CRC%20Diagram.png)
 
 ### Components:
 - **Frontend**: HTML, CSS, JavaScript hosted on S3
@@ -128,6 +154,7 @@ terraform apply
 - **Performance**: Global CDN with sub-second load times
 - **Availability**: 99.9%+ uptime with AWS managed services
 - **Scalability**: Handles traffic spikes automatically
+
 
 ## 🔗 Live Demo
 
