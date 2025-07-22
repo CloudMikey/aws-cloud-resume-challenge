@@ -66,13 +66,14 @@ resource "aws_lambda_function" "dev_funtion" {
   handler         = "function.lambda_handler"
   runtime         = "python3.9"
 }
+
 #Use the URL feature to instead of API Gateway to invoke the Lambda function
 resource "aws_lambda_function_url" "dev_url" {
   function_name      = aws_lambda_function.dev_funtion.function_name
   authorization_type = "NONE"
   
   cors {
-    allow_credentials = true        #Allows credentials to be included in the request
+    allow_credentials = true                #Gives broweser access to the API URL
     allow_origins     = ["*"]
     allow_methods     = ["*"]
     allow_headers     = ["date", "keep-alive"]
@@ -80,6 +81,7 @@ resource "aws_lambda_function_url" "dev_url" {
     max_age          = 7200
   }
 }
+
 #--------------------IAM roles & Policies --------------------#
 
 resource "aws_iam_role" "dev_iam_role_for_lambda" {
@@ -135,7 +137,7 @@ resource "aws_iam_policy" "dev_iam_policy_CRC" {
   })
 }
 
-#This attaches the IAM policy to the IAM role
+#This attaches the IAM role to the Lambda
 resource "aws_iam_role_policy_attachment" "dev_attach_policy_to_role" {
   role       = aws_iam_role.dev_iam_role_for_lambda.name
   policy_arn = aws_iam_policy.dev_iam_policy_CRC.arn

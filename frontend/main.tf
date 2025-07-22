@@ -74,8 +74,6 @@ resource "aws_cloudfront_origin_access_control" "dev_cf_OAC" {
   signing_protocol                  = "sigv4"
 }
 
-
-
 resource "aws_cloudfront_distribution" "dev_cf_distribution" {
   enabled             = true
   default_root_object = "index.html"
