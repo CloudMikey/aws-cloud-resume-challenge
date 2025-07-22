@@ -171,5 +171,5 @@ Visit the live website: [mikhaelvillamor.com](https://mikhaelvillamor.com)
 **Mikhael Angelo C. Villamor**
 - AWS Certified Solutions Architect - Associate
 - Aspiring Cloud & DevOps Engineer
-- [LinkedIn](https://www.linkedin.com/in/mikhael-villamor-95842b362/)
+- [LinkedIn](https://www.linkedin.com/in/mikhaelvillamor/)
 - [GitHub](https://github.com/CloudMikey)
