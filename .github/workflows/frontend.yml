@@ -33,7 +33,7 @@ jobs:
       
       - name: Terraform Init
         id: init
-        run: cd frontend && terraform init
+        run: cd frontend && terraform init -upgrade
         working-directory: ./frontend
 
       - name: Terraform Apply
