@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 260px;
   justify-content: space-between;
-  height: 120px;
+  height: 150px;
   margin-bottom: 0;
   background-color: rgba(229, 203, 203, 0.471);
   padding: 10px;
@@ -22,7 +22,7 @@
 }
 
 .intro-info {
-  padding-top: 5px;
+  padding-top: 0px;
   padding-right: 40px;
   color: rgb(77, 76, 76);
 }
@@ -30,23 +30,23 @@
 
 .personal-info-block {
   padding-left: 20px;
-  padding-top: 4px;
+  padding-top: 7px;
 }
 
 .profile {
-  color: inherit;           /* Use the normal text color */
-  text-decoration: none;    /* Remove underline */
+  color: inherit;           
+  text-decoration: none;    
   transition: color 0.2s, text-decoration 0.2s;
 }
 
 .profile:hover {
-  color: rgb(102, 9, 9);     /* Change color on hover */
+  color: rgb(102, 9, 9);     
   
 }
 
 .profile, .socials {
   font-size: 16px;
-  margin-top: 5px;
+  margin-top: 0;
   margin-bottom: 10px;
   font-weight: bold;
 }
