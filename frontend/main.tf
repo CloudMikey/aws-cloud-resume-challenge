@@ -29,7 +29,7 @@ provider "aws" {
 #--------------------S3 Resources--------------------#
 
 resource "aws_s3_bucket" "dev_bucket" {
-  bucket = "mikhael-website-2025"
+  bucket = "mikhael's-website-2025"
   force_destroy = true
 }
 
