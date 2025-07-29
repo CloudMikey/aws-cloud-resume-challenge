@@ -78,11 +78,11 @@ resource "aws_lambda_function_url" "dev_url" {
   
   cors {
     allow_credentials = true                #Gives broweser access to the API URL
-    allow_origins     = ["*"]
-    allow_methods     = ["*"]
-    allow_headers     = ["date", "keep-alive"]
-    expose_headers    = ["date", "keep-alive"]
-    max_age          = 7200
+    allow_origins     = ["https://mikhaelvillamor.com", "https://www.mikhaelvillamor.com"]
+    allow_methods     = ["GET", "POST", "PUT", "DELETE"]
+    allow_headers     = ["content-type", "authorization", "x-requested-with"]
+    expose_headers    = ["content-length", "x-custom-header"]
+    max_age          = 86400
   }
 }
 
