@@ -25,6 +25,7 @@ provider "aws" {
 }
 
 #--------------------DynamoDB Table --------------------#
+
 # This DynamoDB table will be used to store website visitor counts.
 resource "aws_dynamodb_table" "dev_table" {
   name = "website-visitors"
@@ -36,7 +37,6 @@ resource "aws_dynamodb_table" "dev_table" {
     type = "S"
   }
 }
-
 
 resource "aws_dynamodb_table_item" "dev_item" {
   table_name = aws_dynamodb_table.dev_table.name

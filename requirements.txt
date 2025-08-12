@@ -1,0 +1,31 @@
+# Python Runtime Version
+python==3.11.7
+
+# Python Dependencies
+boto3==1.38.42
+
+# Terraform Version
+terraform==1.12.1
+
+# Terraform Provider Versions
+# AWS Provider
+hashicorp/aws==5.81.0
+
+# Archive Provider
+hashicorp/archive==2.7.0
+
+# AWS Lambda Runtime
+# Python runtime specified in main.tf
+python3.9
+
+# System Dependencies
+# Windows platform (win32)
+# Operating system: Windows
+
+# Project Dependencies Summary:
+# - Python 3.11.7 (development environment)
+# - Python 3.9 (AWS Lambda runtime)
+# - Boto3 1.38.42 (AWS SDK for Python)
+# - Terraform 1.12.1 (Infrastructure as Code)
+# - AWS Provider 5.81.0 (Terraform AWS resources)
+# - Archive Provider 2.7.0 (Terraform archive/zip functionality)
