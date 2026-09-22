@@ -22,7 +22,7 @@ body {
   padding: 0.75in 0.75in 0.5in;
 }
 
-a { color: var(--text); text-decoration: underline; }
+a { color: var(--text); text-decoration: none; }
 
 /* Name and contact */
 .top { border-bottom: 1.5pt solid var(--accent); padding-bottom: 10pt; }
