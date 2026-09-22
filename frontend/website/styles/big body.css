@@ -1,5 +1,0 @@
-.big-body {
-  display: grid;
-  grid-template-columns: 1fr 260px;
-  justify-content: space-between;
-}

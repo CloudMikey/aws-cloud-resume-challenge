@@ -1,179 +1,113 @@
 <!DOCTYPE html>
-<html>
-  <header>
-    <title>Mikhael's Resume</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mikhael Villamor | Cloud Support · Linux Systems · AWS</title>
+  <meta name="description" content="Mikhael Villamor: AWS Certified Solutions Architect – Associate. Linux, networking, and AWS troubleshooting.">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <main class="page">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet">
+    <header class="top">
+      <h1>Mikhael Villamor</h1>
+      <p class="tagline">Cloud Support · Linux Systems · AWS</p>
+      <p class="contact">
+        Diamond Bar, CA
+        <span class="sep">·</span> <a href="mailto:mikhaelvillamor97@gmail.com">mikhaelvillamor97@gmail.com</a>
+        <span class="sep">·</span> <a href="https://www.linkedin.com/in/mikhaelvillamor/" target="_blank" rel="noopener">Linkedin</a>
+        <span class="sep">·</span> <a href="https://github.com/CloudMikey" target="_blank" rel="noopener">Github</a>
+      </p>
+    </header>
 
-  </header>
-  <body>  
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/Header.css">
-    <link rel="stylesheet" href="styles/big body.css">
-    <link rel="stylesheet" href="styles/left side.css">
-    <link rel="stylesheet" href="styles/right side.css">
+    <section>
+      <h2>Summary</h2>
+      <p>AWS Certified Solutions Architect – Associate with hands-on Linux, networking, and AWS troubleshooting experience from three cloud projects and an operations lab, backed by two years in a HIPAA-regulated lab and seven years of customer-facing support.</p>
+    </section>
 
+    <section>
+      <h2>Skills</h2>
+      <p class="skill"><strong>Linux &amp; Systems:</strong> Linux (Ubuntu), Windows, macOS, systemd, permissions, user management, log analysis</p>
+      <p class="skill"><strong>Networking:</strong> TCP/IP, DNS, DHCP, TLS, subnetting, network troubleshooting</p>
+      <p class="skill"><strong>AWS:</strong> EC2, S3, IAM, VPC, CloudFront, Route 53, CloudWatch alarms, Lambda, DynamoDB, Kinesis, Step Functions, Athena</p>
+      <p class="skill"><strong>Scripting &amp; Automation:</strong> Python, Bash, SQL, Terraform (IaC), Git, GitHub Actions, AWS CLI</p>
+      <p class="skill"><strong>Support:</strong> Help desk ticketing, incident triage, root-cause analysis, technical documentation</p>
+    </section>
 
-    <div class="header">
-      <div class="intro-block">
-        <nav class="name">
-          Mikhael Villamor
-        </nav>
+    <section>
+      <h2>Projects</h2>
 
-        <nav class="intro-info">AWS Certified Solutions Architect - Associate with hands-on experience building and deploying automated cloud infrastructure using Terraform, CI/CD, and AWS services. Combines a strong technical foundation in hardware troubleshooting and Windows/Linux support with professional experience in data-sensitive, HIPAA-compliant environments.
-        </nav>
-      </div>
-      <div class="personal-info-block">
-        <div class="socials">mikhaelvillamor97@gmail.com</div>
-        <div class="socials">Diamon Bar, CA</div>
-        <div class="socials"><a class="profile" href="https://www.linkedin.com/in/mikhael-villamor-95842b362/" target="_blank">LinkedIn</a></div>
-        <div class="socials"><a class="profile" href="https://github.com/CloudMikey" target="_blank">GitHub</a></div>
-      </div>
-    </div>
-    <main class="big-body">
-      <div class="left-side">
-        <div class="sec-1">
-          <p class="sub-title">Experience</p>
-          
-          <nav class="work">
-            <p class="jobtitle">
-              <strong>Fulgent Genetics</strong> &bull; El Monte, CA &mdash; <span class="job">Data Entry Specialist I</span>
-            </p>
-            <p class="duration">
-              2025 - PRESENT
-            </p>
-            <ul class="task">
-              <li>Accurately entered sensitive patient data, ensuring integrity, security, and strict HIPAA compliance while collaborating with the client Support Team to maintain seamless data flow.</li>
-              <li>Identified and resolved documentation discrepancies using meticulous standard protocols and applied
-              troubleshooting skills to resolve complex and specific standard rules for different types of clients.
-              </li>
-              <li>Utilize enterprise LIM systems to create and authorize test releases showcasing technical and procedural protocol proficiency.
-              </li>
-            </ul>
-          </nav>
-          
-          <nav class="work">
-            <p class="jobtitle">
-              <strong>Slurpin' Ramen Bar</strong> &bull; City of Industry, CA &mdash; <span class="job">Lead Server/Host I</span>
-            </p>
-            <p class="duration">
-              2017 - 2024
-            </p>
-            <ul class="task">
-              <li>Operated and troubleshooted a POS system ensuring transaction accuracy, minimal technical difficulties, and smooth operation workflows under fast-pace environment.</li>
-              <li>Adapted to sudden changes of flow of business by optimizing seating logistics while maintaining operational efficiency during peak hours.
-              </li>
-              <li>Trained new team members, delegated tasks, and promoted effective communications to sustain high-pressure performances and customer satisfaction.
-                </li>
-            </ul>
-          </nav>
+      <article>
+        <h3>Cloud &amp; IT Operations Support Lab</h3>
+        <ul>
+          <li>Reproduced Linux and network failures on an EC2 lab and worked each one through a full help desk ticket lifecycle in Spiceworks, from reported symptom to verified fix.</li>
+          <li>Diagnosed failed services, permission errors, inode exhaustion, DNS failures, security group drops, and TLS certificate problems.</li>
+          <li>Published a root-cause analysis for every ticket, including the hypotheses I ruled out.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>AI-Powered Serverless Data Pipeline</h3>
+        <ul>
+          <li>Event-driven ETL pipeline on Kinesis, Step Functions, and Comprehend, loading into DynamoDB and S3 and validated with Athena SQL.</li>
+          <li>33 tests at 96% coverage, zero errors over 1,000 events, all in Terraform at about $12/month.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Cloud Resume Challenge <span class="note">(this site)</span></h3>
+        <ul>
+          <li>S3, CloudFront, Route 53, and a Lambda/DynamoDB visitor counter, deployed by GitHub Actions and Terraform.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Automated Linux Dev Environment</h3>
+        <ul>
+          <li>Terraform-built VPC, subnet, Internet Gateway, and EC2, with security groups limited to SSH/HTTP/HTTPS from one source IP and a userdata script that bootstraps Docker and swap.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <article>
+        <h3 class="job-title">Test Entry and Handling II </h3>
+        <div class="job-meta">
+          <span class="where">Fulgent Genetics <span class="place"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>El Monte, CA</span></span>
+          <span class="when"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14v11z"/></svg>Jan 2025 – Present</span>
         </div>
-        <hr>
-        <div class="sec-2">
-          <p class="sub-title">Projects</p>
-          <ul class="projects">
-            <li>
-              <span class="p-title">Cloud Resume Challenge:</span>
-              Created a resume website with HTML, CSS, and JS. Integrated a live visitor counter using Python, deployed with AWS,
-              and managed infrastructure as code with Terraform. Automated deployments with GitHub Actions.
-            </li>
-            <li>
-              <span class="p-title">Virtual Dev Environment:</span>
-              Automated a redeployable Linux environment with Terraform (IaC), VPCs, EC2, and security groups. Managed scripts,
-              data sources, and SSH keys.
-            </li>
-            <li>
-              <span class="p-title">PC Builds:</span>
-              Handpicked hardware components ensuring compatibility and fully assembled custom PCs to meet
-              specific user needs. Delivered ready-to-use systems with all the necessary pre-configuration.
-            </li>
-            <li>
-              <span class="p-title">Dual Boot Setup (Windows & Linux):</span>
-              Configured a dual-boot system, installed Linux alongside Windows, and managed drives, bootloaders, and CLI
-              configuration.
-            </li>
-            <li>
-              <span class="p-title">IT Support Ticketing system:</span>
-              Configured a dual-boot system, installed Linux alongside Windows,
-              and managed drives, bootloaders, and CLI configuration.
-            </li>
-            <li>
-              <span class="p-title">Password Encryptor/Decryptor:</span>
-              Built a Python tool for encrypting and decrypting passwords using cryptographic algorithms.
-            </li>
-          </ul>
+        <ul>
+          <li>Resolve documentation and specimen discrepancies in an enterprise LIM system under HIPAA, root-causing the mismatch instead of patching the symptom.</li>
+          <li>Escalate issues with Client Support and explain technical problems clearly to clients.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3 class="job-title">Lead Server / Host</h3>
+        <div class="job-meta">
+          <span class="where">Slurpin' Ramen Bar <span class="place"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>City of Industry, CA</span></span>
+          <span class="when"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14v11z"/></svg>Dec 2017 – Dec 2024</span>
         </div>
-        <hr>
-        <div class="sec-3">
-          <p class="sub-title">Education</p>
-          <p class="school">
-            <strong>Mt. San Antonio College</strong> &bull; Walnut, CA &mdash; <span class="degree">Associates in Kinesiology</span>
-          </p>
-          <p class="duration">
-            June 2020
-          </p>
-          <a class="cert" href="https://www.credly.com/earner/earned/badge/f5d2306b-6cd1-4f09-9663-7c2603b23493" target="_blank">AWS Certified Solutions Architect - Associate</a>
-          <p class="duration">
-            April 2025
-          </p>
+        <ul>
+          <li>Troubleshot POS faults during peak service, de-escalated customer issues, and trained new staff.</li>
+        </ul>
+      </article>
+    </section>
 
-        </div>
-      </div>
-      <div class="right-side">
-        <nav class="views">
-          Visitors
-        </nav>
-        <nav class="counter">
-           --
-        </nav>
-        <nav class="r-sections">
-          <p class="r-titles">SKILLS</p>
-          <div class="bullets">
-            <p>&bull; Troubleshooting</p>
-            <p>&bull; Hardware management</p>
-            <p>&bull; Automation</p>
-            <p>&bull; Data entry</p>
-            <p>&bull; Process improvement</p>
-            <p>&bull; Socumentation</p>
-            <p>&bull; Adaptability </p>
-            <p>&bull; Customer-centric mindset</p>
-            <p>&bull; Verbal and written <br>communication</p>
-            <p>&bull; Multi-tasking abilities</p>
-            <p>&bull; Self-teaching </p>
-          </div>
-        </nav>
+    <section>
+      <h2>Education &amp; Certification</h2>
+      <p class="edu"><strong>AWS Certified Solutions Architect – Associate (SAA-C03)</strong> <span class="dates">· April 2025</span></p>
+      <p class="edu"><strong>Mt. San Antonio College</strong> · Associate of Arts, Kinesiology <span class="dates">· 2020</span></p>
+    </section>
 
-        <nav class="r-sections">
-          <p class="r-titles">TECHNOLOGIES</p>
-          <div class="bullets">
-            <p>&bull; CLI</p>
-            <p>&bull; Python</p>
-            <p>&bull; HTML/CSS</p>
-            <p>&bull; Terraform</p>
-            <p>&bull; Git</p>
-            <p>&bull; CI/CD</p>
-            <p>&bull; AWS Services</p>
-            <p>&bull; Microsoft Office</p>
-            <p>&bull; Windows-MacOS-Linux</p>
-          </div>
-        </nav>
+    <footer class="foot">
+      Visitors: <span class="counter">--</span>
+    </footer>
 
-        <nav class="r-sections">
-          <p class="r-titles">ACTIVITIES & INTEREST</p>
-          <div class="bullets">
-            <p>&bull; AI</p>
-            <p>&bull; Tech Exploration</p>
-            <p>&bull; Pheripheral Colletions</p>
-            <p>&bull; Video games</p>
-            <p>&bull; Strength and bodybuilding</p>
-          </div>
-        </nav>
-        <img class="cert-img" src="images/cert.png" alt="Certificate">
-      </div>      
-    </main>
-    <script src="index.js"></script>
-  </body>
-</html> 
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

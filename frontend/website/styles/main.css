@@ -1,0 +1,112 @@
+:root {
+  --text: #1f1f1f;
+  --muted: #555555;
+  --accent: #1a3a5c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.page {
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.75in 0.75in 0.5in;
+}
+
+a { color: var(--text); text-decoration: underline; }
+
+/* Name and contact */
+.top { border-bottom: 1.5pt solid var(--accent); padding-bottom: 10pt; }
+h1 { margin: 0; font-size: 22pt; font-weight: 700; line-height: 1.1; color: var(--text); }
+.tagline { margin: 4pt 0 6pt; font-size: 12pt; font-weight: 700; color: var(--muted); }
+.contact { margin: 0; font-size: 10.5pt; color: var(--muted); }
+.sep { margin: 0 3pt; }
+
+/* Sections */
+section { margin-top: 20pt; }
+h2 {
+  margin: 0 0 8pt;
+  padding-bottom: 3pt;
+  border-bottom: 0.75pt solid var(--accent);
+  font-size: 13pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+section > p { margin: 0; }
+
+/* Entries */
+article { margin-bottom: 12pt; }
+article:last-child { margin-bottom: 0; }
+h3 { margin: 0; font-size: 11.5pt; font-weight: 700; }
+.note { font-weight: 400; color: var(--muted); }
+.dates { font-weight: 400; font-style: italic; color: var(--muted); }
+
+/* Experience: title on line 1; company + city left, dates right on line 2 */
+.job-title { color: var(--text); }
+.job-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2pt 12pt;
+  margin-top: 1pt;
+  font-size: 10.5pt;
+}
+.where { font-weight: 600; }
+.place, .when { display: inline-flex; align-items: center; gap: 3pt; color: var(--muted); font-weight: 400; }
+.place { margin-left: 8pt; }
+.icon { width: 11px; height: 11px; fill: currentColor; flex-shrink: 0; }
+
+/* Standard round bullets, 0.25in hanging indent */
+ul { margin: 5pt 0 0; padding-left: 0.25in; list-style: disc; }
+li { margin-bottom: 4pt; padding-left: 2pt; }
+
+/* Skills: one plain line per category */
+.skill { margin: 0 0 5pt; }
+
+/* Education and certification */
+.edu { margin: 0 0 5pt; }
+
+/* Visitor counter (screen only) */
+.foot {
+  margin-top: 24pt;
+  padding-top: 8pt;
+  border-top: 0.75pt solid var(--accent);
+  font-size: 9.5pt;
+  color: var(--muted);
+}
+.counter { font-weight: 700; color: var(--text); }
+
+/* Phones: 16px side gutter */
+@media (max-width: 600px) {
+  .page { padding: 28px 16px 24px; }
+  h1 { font-size: 20pt; }
+  .place { margin-left: 6pt; }
+}
+
+/* Print / Save as PDF: ATS spec */
+@media print {
+  @page { size: letter; margin: 0.5in; }
+  .page { max-width: none; padding: 0; }
+  body { color: #000000; font-size: 11pt; line-height: 1.15; }
+  section { margin-top: 10pt; }
+  h2 { margin-bottom: 5pt; }
+  article { margin-bottom: 7pt; }
+  ul { margin-top: 3pt; }
+  li { margin-bottom: 2pt; }
+  .skill, .edu { margin-bottom: 3pt; }
+  a, .job-title { color: #000000; }
+  .foot, .screen-only { display: none; }
+  article, .skill { break-inside: avoid; }
+}
