@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mikhael Villamor | Cloud Support · Linux Systems · AWS</title>
-  <meta name="description" content="Mikhael Villamor: AWS Certified Solutions Architect – Associate. Linux, networking, and AWS troubleshooting.">
+  <title>Mikhael Villamor | Cloud &amp; IT Support · Linux · AWS</title>
+  <meta name="description" content="Mikhael Villamor: AWS Certified Solutions Architect – Associate. Cloud and IT support, Linux, networking, and AWS troubleshooting.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -12,60 +17,65 @@
 
     <header class="top">
       <h1>Mikhael Villamor</h1>
-      <p class="tagline">Cloud Support · Linux Systems · AWS</p>
+      <p class="tagline">Cloud &amp; IT Support · Linux · AWS</p>
       <p class="contact">
-        Diamond Bar, CA
-        <span class="sep">·</span> <a href="mailto:mikhaelvillamor97@gmail.com">mikhaelvillamor97@gmail.com</a>
-        <span class="sep">·</span> <a href="https://www.linkedin.com/in/mikhaelvillamor/" target="_blank" rel="noopener">Linkedin</a>
-        <span class="sep">·</span> <a href="https://github.com/CloudMikey" target="_blank" rel="noopener">Github</a>
+        <span class="item">Email: <a href="mailto:mikhaelvillamor97@gmail.com">mikhaelvillamor97@gmail.com</a></span>
+        <span class="sep">|</span> <span class="item">Diamond Bar, CA</span>
+      </p>
+      <p class="contact">
+        <span class="item">LinkedIn: <a href="https://www.linkedin.com/in/mikhaelvillamor/" target="_blank" rel="noopener">linkedin.com/in/mikhaelvillamor</a></span>
+        <span class="sep">|</span> <span class="item">GitHub: <a href="https://github.com/CloudMikey" target="_blank" rel="noopener">github.com/CloudMikey</a></span>
       </p>
     </header>
 
     <section>
       <h2>Summary</h2>
-      <p>AWS Certified Solutions Architect – Associate with hands-on Linux, networking, and AWS troubleshooting experience from three cloud projects and an operations lab, backed by two years in a HIPAA-regulated lab and seven years of customer-facing support.</p>
+      <p>AWS Certified Solutions Architect – Associate with hands-on Linux, networking, and AWS troubleshooting from a 5-ticket operations lab and three cloud projects. First stop for my team's tech issues at Fulgent Genetics, a HIPAA-regulated lab, backed by seven years of customer-facing support.</p>
     </section>
 
     <section>
-      <h2>Skills</h2>
-      <p class="skill"><strong>Linux &amp; Systems:</strong> Linux (Ubuntu), Windows, macOS, systemd, permissions, user management, log analysis</p>
-      <p class="skill"><strong>Networking:</strong> TCP/IP, DNS, DHCP, TLS, subnetting, network troubleshooting</p>
-      <p class="skill"><strong>AWS:</strong> EC2, S3, IAM, VPC, CloudFront, Route 53, CloudWatch alarms, Lambda, DynamoDB, Kinesis, Step Functions, Athena</p>
-      <p class="skill"><strong>Scripting &amp; Automation:</strong> Python, Bash, SQL, Terraform (IaC), Git, GitHub Actions, AWS CLI</p>
-      <p class="skill"><strong>Support:</strong> Help desk ticketing, incident triage, root-cause analysis, technical documentation</p>
+      <h2>Technical Skills</h2>
+      <p class="skill"><strong>Linux &amp; Systems:</strong> Linux (Ubuntu), Windows, macOS, systemd, file permissions, user management, log analysis</p>
+      <p class="skill"><strong>Networking:</strong> TCP/IP, DNS, DHCP, HTTP/HTTPS, TLS, subnetting, network troubleshooting</p>
+      <p class="skill"><strong>AWS:</strong> EC2, S3, IAM, VPC, CloudFront, Route 53, CloudWatch alarms, Lambda, DynamoDB</p>
+      <p class="skill"><strong>Scripting &amp; Automation:</strong> Python, Bash, SQL, Terraform (IaC), Git, GitHub Actions, AWS CLI, pytest, Claude&nbsp;Code (AI-assisted development)</p>
+      <p class="skill"><strong>Support:</strong> Help desk ticketing, incident triage, root-cause analysis, technical documentation, Microsoft 365</p>
     </section>
 
     <section>
       <h2>Projects</h2>
 
       <article>
-        <h3>Cloud &amp; IT Operations Support Lab</h3>
-        <ul>
-          <li>Reproduced Linux and network failures on an EC2 lab and worked each one through a full help desk ticket lifecycle in Spiceworks, from reported symptom to verified fix.</li>
-          <li>Diagnosed failed services, permission errors, inode exhaustion, DNS failures, security group drops, and TLS certificate problems.</li>
-          <li>Published a root-cause analysis for every ticket, including the hypotheses I ruled out.</li>
+        <h3>Cloud &amp; IT Operations Support Lab <span class="note">(Personal Lab)</span></h3>
+        <ul class="task">
+          <li><span class="dot">&bull;</span>Reproduced 5 Linux, network, and AWS failures on an Ubuntu EC2 lab, working each through a Spiceworks ticket from reported symptom to verified fix.</li>
+          <li><span class="dot">&bull;</span>Diagnosed failed services, permission errors, inode exhaustion, DNS failures, security group drops, and TLS certificate problems.</li>
+          <li><span class="dot">&bull;</span>Traced an S3 AccessDenied to a missing IAM permission and an unreachable instance to a missing Internet Gateway route.</li>
+          <li><span class="dot">&bull;</span>Published a root-cause analysis for every ticket, including the hypotheses I ruled out.</li>
         </ul>
       </article>
 
       <article>
-        <h3>AI-Powered Serverless Data Pipeline</h3>
-        <ul>
-          <li>Event-driven ETL pipeline on Kinesis, Step Functions, and Comprehend, loading into DynamoDB and S3 and validated with Athena SQL.</li>
-          <li>33 tests at 96% coverage, zero errors over 1,000 events, all in Terraform at about $12/month.</li>
+        <h3>AI-Powered Serverless Data Pipeline <span class="note">(Personal Project)</span></h3>
+        <ul class="task">
+          <li><span class="dot">&bull;</span>Built an event-driven ETL pipeline: Kinesis and S3 ingest, Step Functions running Amazon Comprehend enrichment, output to DynamoDB and S3.</li>
+          <li><span class="dot">&bull;</span>Monitored it with 6 CloudWatch alarms tagged by severity, covering Lambda errors, dead-letter queues, Kinesis lag, and Step Functions failures.</li>
+          <li><span class="dot">&bull;</span>Validated output with Athena SQL and 33 unit tests at 96% coverage: zero errors across 1,000 events, all in Terraform at about $12/month.</li>
         </ul>
       </article>
 
       <article>
-        <h3>Cloud Resume Challenge <span class="note">(this site)</span></h3>
-        <ul>
-          <li>S3, CloudFront, Route 53, and a Lambda/DynamoDB visitor counter, deployed by GitHub Actions and Terraform.</li>
+        <h3>Cloud Resume Challenge <span class="note">(Personal Project, this site)</span></h3>
+        <ul class="task">
+          <li><span class="dot">&bull;</span>S3 and CloudFront with Origin Access Control, Route 53 and ACM for DNS and TLS, and a Lambda and DynamoDB visitor counter.</li>
+          <li><span class="dot">&bull;</span>Deployed by GitHub Actions through OIDC (no stored access keys), with pytest as a gate before Terraform applies.</li>
         </ul>
       </article>
 
       <article>
-        <h3>Automated Linux Dev Environment</h3>
-        <ul>
-          <li>Terraform-built VPC, subnet, Internet Gateway, and EC2, with security groups limited to SSH/HTTP/HTTPS from one source IP and a userdata script that bootstraps Docker and swap.</li>
+        <h3>Automated Linux Dev Environment <span class="note">(Personal Project)</span></h3>
+        <ul class="task">
+          <li><span class="dot">&bull;</span>Terraform-built VPC, subnet, Internet Gateway, and EC2, with security groups limited to SSH/HTTP/HTTPS from one IP and a userdata script that bootstraps Docker and swap.</li>
         </ul>
       </article>
     </section>
@@ -74,37 +84,67 @@
       <h2>Experience</h2>
 
       <article>
-        <h3 class="job-title">Test Entry and Handling II </h3>
-        <div class="job-meta">
-          <span class="where">Fulgent Genetics <span class="place"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>El Monte, CA</span></span>
-          <span class="when"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14v11z"/></svg>Jan 2025 – Present</span>
+        <div class="entry-head">
+          <h3>Test Entry and Handling Specialist II<span class="where">, Fulgent Genetics, El Monte, CA</span></h3>
+          <span class="duration">Apr 2026 – Present</span>
         </div>
-        <ul>
-          <li>Resolve documentation and specimen discrepancies in an enterprise LIM system under HIPAA, root-causing the mismatch instead of patching the symptom.</li>
-          <li>Escalate issues with Client Support and explain technical problems clearly to clients.</li>
+        <ul class="task">
+          <li><span class="dot">&bull;</span>Handle my team's laptop, monitor, docking station, and Teams issues informally (about 3–4 a month), escalating the rest to IT with symptom, steps tried, and result.</li>
+          <li><span class="dot">&bull;</span>Trained 14 new hires on CRM systems, SOPs, and data entry standards, and write workflow guides for the team.</li>
+          <li><span class="dot">&bull;</span>Prioritize test cases by urgency across multiple processing queues and write a discrepancy report for each error.</li>
         </ul>
       </article>
 
       <article>
-        <h3 class="job-title">Lead Server / Host</h3>
-        <div class="job-meta">
-          <span class="where">Slurpin' Ramen Bar <span class="place"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>City of Industry, CA</span></span>
-          <span class="when"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14v11z"/></svg>Dec 2017 – Dec 2024</span>
+        <div class="entry-head">
+          <h3>Data Entry Specialist I<span class="where">, Fulgent Genetics, El Monte, CA</span></h3>
+          <span class="duration">Jan 2025 – Apr 2026</span>
         </div>
-        <ul>
-          <li>Troubleshot POS faults during peak service, de-escalated customer issues, and trained new staff.</li>
+        <ul class="task">
+          <li><span class="dot">&bull;</span>Processed 300–500 orders a week in web-based CRM and LIMS under HIPAA, running quality checks.</li>
+          <li><span class="dot">&bull;</span>Root-caused specimen and documentation discrepancies with client SOPs, fixing the source instead of the symptom.</li>
+          <li><span class="dot">&bull;</span>Escalated issues through Client Support, translating technical discrepancies into clear client communication.</li>
+        </ul>
+      </article>
+
+      <article>
+        <div class="entry-head">
+          <h3>Lead Server / Host<span class="where">, Slurpin' Ramen Bar, City of Industry, CA</span></h3>
+          <span class="duration">Dec 2017 – Dec 2024</span>
+        </div>
+        <ul class="task">
+          <li><span class="dot">&bull;</span>Troubleshot POS faults during peak service, de-escalated customer issues, and trained new staff.</li>
         </ul>
       </article>
     </section>
 
     <section>
-      <h2>Education &amp; Certification</h2>
-      <p class="edu"><strong>AWS Certified Solutions Architect – Associate (SAA-C03)</strong> <span class="dates">· April 2025</span></p>
-      <p class="edu"><strong>Mt. San Antonio College</strong> · Associate of Arts, Kinesiology <span class="dates">· 2020</span></p>
+      <h2>Certifications</h2>
+      <div class="entry-head line">
+        <p><strong>AWS Certified Solutions Architect – Associate (SAA-C03)</strong></p>
+        <span class="duration">Apr 2025</span>
+      </div>
+      <div class="entry-head line">
+        <p>LinkedIn Learning: Learning Linux Command Line</p>
+        <span class="duration">Sep 2026</span>
+      </div>
+      <div class="entry-head line">
+        <p>LinkedIn Learning: Networking Foundations: Networking Basics</p>
+        <span class="duration">Sep 2026</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="entry-head line">
+        <p><strong>Associate of Arts, Kinesiology</strong>, Mt. San Antonio College, Walnut, CA</p>
+        <span class="duration">Jun 2020</span>
+      </div>
     </section>
 
     <footer class="foot">
-      Visitors: <span class="counter">--</span>
+      <span>Visitors: <span class="counter">--</span></span>
+      <a class="download" href="files/Mikhael_Villamor_Resume.pdf" download>Download PDF</a>
     </footer>
 
   </main>

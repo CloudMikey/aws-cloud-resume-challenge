@@ -57,6 +57,7 @@ resource "aws_s3_object" "dev_objets" {
       html = "text/html"
       css  = "text/css"                            #define proper MIME types for browser compatibility
       js   = "application/javascript"
+      pdf  = "application/pdf"
     },
     regex("\\.([^.]+)$", each.value)[0],
     "application/octet-stream"

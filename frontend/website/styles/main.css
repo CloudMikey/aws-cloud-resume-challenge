@@ -1,7 +1,7 @@
 :root {
-  --text: #1f1f1f;
-  --muted: #555555;
-  --accent: #1a3a5c;
+  --text: #000000;
+  --muted: rgb(77, 76, 76);   /* grey from the original site */
+  --accent: #1a3a5c;          /* navy, same as the current live site */
 }
 
 * { box-sizing: border-box; }
@@ -10,103 +10,124 @@ body {
   margin: 0;
   background: #ffffff;
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11pt;
-  line-height: 1.4;
+  font-family: Calibri, Carlito, Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  line-height: 1.35;
   text-align: left;
 }
 
 .page {
   max-width: 8.5in;
   margin: 0 auto;
-  padding: 0.75in 0.75in 0.5in;
+  padding: 0.6in 0.65in 0.4in;
 }
 
-a { color: var(--text); text-decoration: none; }
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+a:hover { text-decoration: underline; }
 
-/* Name and contact */
-.top { border-bottom: 1.5pt solid var(--accent); padding-bottom: 10pt; }
-h1 { margin: 0; font-size: 22pt; font-weight: 700; line-height: 1.1; color: var(--text); }
-.tagline { margin: 4pt 0 6pt; font-size: 12pt; font-weight: 700; color: var(--muted); }
-.contact { margin: 0; font-size: 10.5pt; color: var(--muted); }
-.sep { margin: 0 3pt; }
-
-/* Sections */
-section { margin-top: 20pt; }
-h2 {
-  margin: 0 0 8pt;
-  padding-bottom: 3pt;
-  border-bottom: 0.75pt solid var(--accent);
-  font-size: 13pt;
+/* Name and contact: centered, same as the PDF resumes */
+.top {
+  text-align: center;
+  padding-bottom: 6pt;
+}
+h1 {
+  margin: 0;
+  font-size: 24pt;
   font-weight: 700;
+  line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--accent);
 }
+.tagline { margin: 4pt 0 6pt; font-size: 12.5pt; font-weight: 700; color: var(--muted); }
+.contact { margin: 0 0 2pt; font-size: 10.5pt; }
+.sep { margin: 0 5pt; }
+.item { white-space: nowrap; }  /* keeps each label with its value */
+
+/* Sections: 12pt bold caps header, 1px rule under it */
+section { margin-top: 14pt; }
+h2 {
+  margin: 0 0 6pt;
+  padding-bottom: 2pt;
+  border-bottom: 1px solid var(--accent);
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+}
 section > p { margin: 0; }
 
-/* Entries */
-article { margin-bottom: 12pt; }
+/* Entries: title left, dates right on the same line */
+article { margin-bottom: 8pt; }
 article:last-child { margin-bottom: 0; }
-h3 { margin: 0; font-size: 11.5pt; font-weight: 700; }
-.note { font-weight: 400; color: var(--muted); }
-.dates { font-weight: 400; font-style: italic; color: var(--muted); }
-
-/* Experience: title on line 1; company + city left, dates right on line 2 */
-.job-title { color: var(--text); }
-.job-meta {
+.entry-head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 2pt 12pt;
-  margin-top: 1pt;
-  font-size: 10.5pt;
+  gap: 0 12pt;
 }
-.where { font-weight: 600; }
-.place, .when { display: inline-flex; align-items: center; gap: 3pt; color: var(--muted); font-weight: 400; }
-.place { margin-left: 8pt; }
-.icon { width: 11px; height: 11px; fill: currentColor; flex-shrink: 0; }
+.entry-head p { margin: 0; }
+h3 { margin: 0; font-size: 12pt; font-weight: 700; }
+.where, .note { font-weight: 400; }
+.duration { white-space: nowrap; }
+.line { margin-bottom: 3pt; }
 
-/* Standard round bullets, 0.25in hanging indent */
-ul { margin: 5pt 0 0; padding-left: 0.25in; list-style: disc; }
-li { margin-bottom: 4pt; padding-left: 2pt; }
+/* Bullets: typed "•" kept as text (survives copy and PDF), hanging indent */
+.task { margin: 3pt 0 0; padding: 0; list-style: none; }
+.task li { margin: 0 0 2pt; padding-left: 1em; }
+.dot { display: inline-block; width: 1em; margin-left: -1em; }
 
 /* Skills: one plain line per category */
-.skill { margin: 0 0 5pt; }
-
-/* Education and certification */
-.edu { margin: 0 0 5pt; }
+.skill { margin: 0 0 3pt; }
 
 /* Visitor counter (screen only) */
 .foot {
-  margin-top: 24pt;
-  padding-top: 8pt;
-  border-top: 0.75pt solid var(--accent);
-  font-size: 9.5pt;
+  margin-top: 18pt;
+  padding-top: 6pt;
+  border-top: 1px solid var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 10pt;
   color: var(--muted);
 }
 .counter { font-weight: 700; color: var(--text); }
 
-/* Phones: 16px side gutter */
+/* Download PDF link: grey, turns navy on hover */
+.download { color: var(--muted); font-weight: 700; }
+.download:hover { color: var(--accent); text-decoration: none; }
+
+/* Phones: 16px side gutter, contact items stack */
 @media (max-width: 600px) {
-  .page { padding: 28px 16px 24px; }
+  body { font-size: 11.5pt; }
+  .page { padding: 24px 16px; }
   h1 { font-size: 20pt; }
-  .place { margin-left: 6pt; }
+  .duration { color: var(--muted); }
+  .sep { display: none; }
+  .item { display: block; }
 }
 
-/* Print / Save as PDF: ATS spec */
+/* Print / Save as PDF: all black, matches the tailored resume spec */
 @media print {
   @page { size: letter; margin: 0.5in; }
+  body { font-size: 11pt; line-height: 1.15; }
   .page { max-width: none; padding: 0; }
-  body { color: #000000; font-size: 11pt; line-height: 1.15; }
-  section { margin-top: 10pt; }
-  h2 { margin-bottom: 5pt; }
-  article { margin-bottom: 7pt; }
-  ul { margin-top: 3pt; }
-  li { margin-bottom: 2pt; }
-  .skill, .edu { margin-bottom: 3pt; }
-  a, .job-title { color: #000000; }
-  .foot, .screen-only { display: none; }
+  h1 { font-size: 16pt; }
+  .tagline { font-size: 11pt; margin: 2pt 0 4pt; }
+  .contact { font-size: 10pt; }
+  .top { padding-bottom: 4pt; }
+  h1, h2, .tagline, a { color: #000000; }
+  h2 { border-bottom-color: #000000; }
+  section { margin-top: 8pt; }
+  h2 { margin-bottom: 4pt; }
+  article { margin-bottom: 5pt; }
+  .task li { margin-bottom: 1pt; }
+  .foot { display: none; }
   article, .skill { break-inside: avoid; }
 }
